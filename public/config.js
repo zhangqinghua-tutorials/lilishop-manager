@@ -3,10 +3,10 @@ var BASE = {
      * @description api请求基础路径
      */
     API_DEV: {
-      common: "http://lilishop.easybyte-hk.com/api/common",
-      buyer: "http://lilishop.easybyte-hk.com/api/buyer",
-      seller: "http://lilishop.easybyte-hk.com/api/seller",
-      manager: "http://lilishop.easybyte-hk.com/api/manager",
+      common: "http://lilishop.easybyte-hk.com/api",
+      buyer: "http://lilishop.easybyte-hk.com/api",
+      seller: "http://lilishop.easybyte-hk.com/api",
+      manager: "http://lilishop.easybyte-hk.com/api",
     },
     API_PROD: {
       common: "https://common-api.pickmall.cn",
