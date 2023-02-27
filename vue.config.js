@@ -69,6 +69,7 @@ cdn =  enableProduction && configs.enableCDN  ? cdn : { css: [], js: [] };
 externals = enableProduction && configs.enableCDN  ? externals : {};
 jsPlugin = enableProduction ? jsPlugin : [];
 module.exports = {
+  // 使用相对路径
   publicPath: './',
   css: {
     loaderOptions: {
