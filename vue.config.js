@@ -69,6 +69,7 @@ cdn =  enableProduction && configs.enableCDN  ? cdn : { css: [], js: [] };
 externals = enableProduction && configs.enableCDN  ? externals : {};
 jsPlugin = enableProduction ? jsPlugin : [];
 module.exports = {
+  publicPath: './',
   css: {
     loaderOptions: {
       // 向 CSS 相关的 loader 传递选项
@@ -124,7 +125,7 @@ module.exports = {
   // 将cdn的资源挂载到插件上
   chainWebpack(config) {
     //  @ 对应 src目录
-    config.resolve.alias.set("@", resolve("./src"));
+    config.resolve.alias.set("@", resolve("src"));
     config.plugin("html").tap(args => {
       args[0].cdn = cdn;
       return args;
