@@ -4,4 +4,4 @@ FROM nginx:stable-alpine
 
 # 将dist文件中的内容复制到 /usr/share/nginx/html/merchant 这个目录下面
 # 前端访问时使用 http://dev.easybyte-hk.com/merchant/ > http://localhost:80/merchant
-COPY dist/  /usr/share/nginx/html
+COPY dist/  /usr/share/nginx/html/manager
