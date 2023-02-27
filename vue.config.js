@@ -124,7 +124,7 @@ module.exports = {
   // 将cdn的资源挂载到插件上
   chainWebpack(config) {
     //  @ 对应 src目录
-    config.resolve.alias.set("@", resolve("src"));
+    config.resolve.alias.set("@", resolve("./src"));
     config.plugin("html").tap(args => {
       args[0].cdn = cdn;
       return args;
