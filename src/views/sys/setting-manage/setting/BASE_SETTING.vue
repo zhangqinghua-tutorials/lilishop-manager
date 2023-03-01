@@ -169,7 +169,7 @@ export default {
   img {
     margin-right: 10px;
     width: 100px;
-    height: 100px;
+    /**height: 100px;**/
   }
 }
 </style>
