@@ -130,11 +130,13 @@ export default {
     },
     submitLogin() {
       // 登录操作
-      this.$refs.usernameLoginForm.validate((valid) => {
-        if (valid) {
-          this.$refs.verify.init();
-        }
-      });
+      // this.$refs.usernameLoginForm.validate((valid) => {
+      //   if (valid) {
+      //     this.$refs.verify.init();
+      //   }
+      // });
+      let con = {status: true}
+      this.verifyChange(con);
     },
     verifyChange(con) {
       // 拼图验证码回显
