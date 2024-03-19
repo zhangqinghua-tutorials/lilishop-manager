@@ -10,8 +10,7 @@ Vue.use(VueRouter);
 // 路由配置
 const RouterConfig = {
   mode: 'history',
-  base: './',
-  routes: routers,
+  routes: routers
 };
 
 /**
