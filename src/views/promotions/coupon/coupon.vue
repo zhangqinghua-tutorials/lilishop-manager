@@ -99,16 +99,16 @@
             @click="close(row)"
             >关闭
           </Button>
-          <Button
-            class="ml_5"
-            v-if="
-              row.promotionStatus === 'CLOSE' || row.promotionStatus === 'END'
-            "
-            type="error"
-            size="small"
-            @click="remove(row)"
-            >删除
-          </Button>
+          <!--<Button-->
+            <!--class="ml_5"-->
+            <!--v-if="-->
+              <!--row.promotionStatus === 'CLOSE' || row.promotionStatus === 'END'-->
+            <!--"-->
+            <!--type="error"-->
+            <!--size="small"-->
+            <!--@click="remove(row)"-->
+            <!--&gt;删除-->
+          <!--</Button>-->
           <Button
             style="margin: 5px"
             type="info"
@@ -178,13 +178,11 @@ export default {
         {
           title: "面额/折扣",
           key: "price",
-          width: 150,
+          // width: 150,
           render: (h, params) => {
             if (params.row.price) {
-              return h(
-                "div",
-                this.$options.filters.unitPrice(params.row.price, "￥")
-              );
+              return h("priceColorScheme", {props:{value:params.row.price,color:this.$mainColor}} );
+
             } else {
               return h("div", params.row.couponDiscount + "折");
             }
@@ -215,7 +213,7 @@ export default {
         },
         {
           title: "获取方式",
-          width: 120,
+          // width: 120,
           key: "getType",
           render: (h, params) => {
             if (params.row.getType === "FREE") {
@@ -234,7 +232,7 @@ export default {
         {
           title: "优惠券类型",
           key: "couponType",
-          width: 150,
+          // width: 150,
           render: (h, params) => {
             let text = "";
             if (params.row.couponType === "DISCOUNT") {
@@ -249,7 +247,7 @@ export default {
         {
           title: "品类描述",
           key: "scopeType",
-          width: 120,
+          // width: 120,
           render: (h, params) => {
             return promotionsScopeTypeRender(h, params);
           },
@@ -288,7 +286,7 @@ export default {
           slot: "action",
           align: "center",
           fixed: "right",
-          width: 150,
+          width: 250,
         },
       ],
       data: [], // 表单数据

@@ -359,7 +359,7 @@ export default {
           key: "price",
           minWidth: 40,
           render: (h, params) => {
-            return h("div", this.$options.filters.unitPrice(params.row.price, "￥"));
+            return h("priceColorScheme", {props:{value:params.row.price,color:this.$mainColor}} );
           },
         },
         {
@@ -566,10 +566,11 @@ export default {
         onOk: () => {
           let ids = [];
           this.selectedGoods.forEach(function (e) {
-            ids.push(e.id);
+            ids.push(e.skuId);
           });
+
           this.form.promotionGoodsList = this.form.promotionGoodsList.filter((item) => {
-            return !ids.includes(item.id);
+            return !ids.includes(item.skuId);
           });
         },
       });

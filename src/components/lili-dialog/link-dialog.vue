@@ -66,7 +66,6 @@ export default {
       }, []);
       this.wap.forEach((items,indexs) => {
         if(items.title == '活动'){
-          console.log(32323232323232)
           this.wap.splice(indexs,1)
         }
       })
@@ -120,11 +119,11 @@ export default {
   width: 100%;
 }
 
-/deep/ .ivu-modal {
+::v-deep .ivu-modal {
   overflow: hidden;
   height: 650px !important;
 }
-/deep/ .ivu-modal-body {
+::v-deep .ivu-modal-body {
   width: 100%;
   height: 500px;
   overflow: hidden;

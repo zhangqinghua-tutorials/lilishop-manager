@@ -15,7 +15,9 @@
               <div>{{ form.goodsSku.storeName }}</div>
             </FormItem>
             <FormItem label="商品价格">
-              <div>{{ form.goodsSku.price | unitPrice("￥") }}</div>
+              <div>
+                <priceColorScheme :value="form.goodsSku.price" :color="$mainColor"></priceColorScheme>
+              </div>
             </FormItem>
             <FormItem label="库存">
               <div>{{ form.goodsSku.quantity }}</div>
@@ -96,7 +98,7 @@ export default {
       pointsGoodsCategoryId:'',
       pointsGoodsCategoryName:'',
       form: {
-        
+
         /** 活动名称 */
         promotionName: "",
         /** 报名截止时间 */
@@ -109,7 +111,7 @@ export default {
         seckillRule: "",
         goodsSku: {},
         promotionStatus: "NEW",
-       
+
       },
       categoryList: [], // 分类列表
       id: this.$route.query.id, // 活动id
@@ -118,6 +120,7 @@ export default {
         settlementPrice: [{ required: true, message: "请填写结算价格" }],
         pointsGoodsCategoryId: [{ required: true, message: "请选择积分商品分类" }],
         points: [{ required: true, message: "请填写兑换积分" }],
+        activeStock: [{ required: true, message: "请填写库存" }],
       },
       options: {
         disabledDate(date) {
@@ -284,7 +287,7 @@ div.base-info-item {
   }
 
   /*teatarea*/
-  /deep/ .el-textarea {
+  ::v-deep .el-textarea {
     width: 150%;
   }
 
@@ -312,11 +315,11 @@ div.base-info-item {
 
 /*图片上传组件第一张图设置封面*/
 .goods-images {
-  /deep/ li.el-upload-list__item:first-child {
+  ::v-deep li.el-upload-list__item:first-child {
     position: relative;
   }
 
-  /deep/ li.el-upload-list__item:first-child:after {
+  ::v-deep li.el-upload-list__item:first-child:after {
     content: "封";
     color: #fff;
     font-weight: bold;

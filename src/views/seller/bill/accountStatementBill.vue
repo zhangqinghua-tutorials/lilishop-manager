@@ -81,11 +81,9 @@ export default {
           key: "billPrice",
           width: 130,
           render: (h, params) => {
-            return h(
-              "div",
-              this.$options.filters.unitPrice(params.row.billPrice, "￥")
-            );
+            return h("priceColorScheme", {props:{value:params.row.billPrice,color:this.$mainColor}} );
           },
+
         },
         {
           title: "状态",
@@ -213,7 +211,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-/deep/ .ivu-col {
+::v-deep .ivu-col {
   min-height: 100vh;
 }
 </style>

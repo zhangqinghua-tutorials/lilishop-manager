@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="content">
-      <div >
+      <div>
         <div class="tables">
           <Table
            border
@@ -22,7 +22,7 @@
             :current="params.pageNumber"
             :page-size="params.pageSize"
             class="mt_10"
-            :total="Number(totals)"
+            :total="Number(total)"
             size="small"
             show-elevator
           />
@@ -70,7 +70,7 @@ export default {
                 "Button",
                 {
                   props: {
-                    type: this.index == params.index ? "primary" : "",
+                    type: this.index == params.index ? "primary" : "default",
                     size: "small",
                   },
                   on: {
@@ -127,7 +127,7 @@ img {
   overflow: auto;
   width: 100%;
 }
-/deep/ .ivu-table-wrapper {
+::v-deep .ivu-table-wrapper {
   width: 100%;
 }
 .list {

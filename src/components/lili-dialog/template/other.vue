@@ -117,7 +117,6 @@ export default {
     if(urls.indexOf('/floorList/renovation') != -1){
       this.linkList.forEach((items,indexs)=>{
         if(items.title == '砍价'){
-          console.log(12321322,indexs)
           this.linkList.splice(indexs,1)
         }
       })
@@ -136,7 +135,7 @@ export default {
       this.linkVisible = false
     }
 
-  },  
+  },
   methods: {
     handleLink(val, index) {
       val = { ...val, ___type: "other" };
@@ -158,7 +157,7 @@ export default {
   text-align: center;
   transition: 0.35s;
   cursor: pointer;
-  /deep/ p {
+  ::v-deep p {
     margin: 10px 0;
   }
   border: 1px solid #ededed;
