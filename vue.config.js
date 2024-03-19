@@ -66,6 +66,7 @@ cdn =  enableProduction && configs.enableCDN  ? cdn : { css: [], js: [] };
 externals = enableProduction && configs.enableCDN  ? externals : {};
 jsPlugin = enableProduction ? jsPlugin : [];
 module.exports = {
+  publicPath: './',
   css: {
     loaderOptions: {
       // 向 CSS 相关的 loader 传递选项
