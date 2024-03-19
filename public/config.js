@@ -9,19 +9,19 @@ var BASE = {
     manager: "https://hw.starsnine.com/api/manager",
   },
   API_PROD: {
-    common: "https://common-api.pickmall.cn",
-    buyer: "https://buyer-api.pickmall.cn",
-    seller: "https://store-api.pickmall.cn",
-    manager: "https://admin-api.pickmall.cn"
+    common: "https://hw.starsnine.com/api/common",
+    buyer: "https://hw.starsnine.com/api/buyer",
+    seller: "https://hw.starsnine.com/api/seller",
+    manager: "https://hw.starsnine.com/api/manager",
   },
   /**
    * @description // 跳转买家端地址 pc端
    */
-  PC_URL: "https://pc-b2b2c.pickmall.cn",
+  PC_URL: "https://hw.starsnine.com",
   /**
    * @description  // 跳转买家端地址 wap端
    */
-  WAP_URL: "https://m-b2b2c.pickmall.cn",
+  WAP_URL: "https://hw.starsnine.com",
   /**
    *  @description api请求基础路径前缀
    */
